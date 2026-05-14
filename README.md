@@ -1,17 +1,36 @@
-# 🚀 工作坊：Spec-driven Development (SDD) 與 Spec-kit 實戰
-**時長**：90 分鐘
-**主題**：從「Vibe Coding」轉向「規格導向開發」，打造可維護的 AI 軟體
-**講者**：Che-Chia Chang
+# 工作坊：Spec-driven Development（SDD）與 Spec-kit
 
-## 📅 課程時間分配 (Timeline)
-| 時間 | 環節 | 內容重點 |
+- 時長：90 分鐘
+- 目標：從 vibe coding 轉向規格優先開發
+- 講者：Che-Chia Chang
+
+## 時間安排
+| 時間 | 環節 | 重點 |
 |---|---|---|
-| **00-10m** | **觀念導入** | 什麼是 SDD？為什麼規格比程式碼更重要？ |
-| **10-20m** | **環境準備** | specify init、API Key 設定與 Agent 檢查 |
-| **20-30m** | **定義憲法** | 建立專案不變的原則 (/speckit.constitution) |
-| **30-75m** | **實戰 LAB** | 串接 YouBike 2.0 API 並產生前端網頁 (4 步驟 Prompt) |
-| **75-85m** | **驗證與修復** | 處理 AI 邏輯偏移與規格更新 (/speckit.clarify) |
-| **85-90m** | **結語 Q&A** | 邁向「我寫規格，我不讀代碼」的境界 |
+| 00-10m | 導入 | 什麼是 SDD、為何規格是真實來源 |
+| 10-20m | 環境準備 | `specify init`、API Key、Agent 檢查 |
+| 20-30m | 憲法定義 | 定義專案原則（`/speckit.constitution`） |
+| 30-75m | 實作 LAB | 用 4 步驟 Prompt 建立 YouBike 2.0 網頁 |
+| 75-85m | 驗證修正 | 修正偏移並更新規格（`/speckit.clarify`） |
+| 85-90m | Q&A | 收尾與問答 |
+
+## LAB 清單
+1. 環境：安裝 CLI，執行 `specify init --ai [agent]`，再執行 `specify check`。
+2. 憲法：定義命名規範，資料抓取需有 `try-catch`。
+3. 規格：確認 `spec.md` 覆蓋所有 user stories，釐清模糊欄位。
+4. 實作：先改規格，不直接改程式碼；更新規格後再重生任務。
+5. 驗收：執行 `/speckit.analyze`，最後用 `/speckit.checklist` 完成檢核。
+
+## 預期成果
+1. 具備用 Spec-kit 從 0 到 1 做原型的能力。
+2. 理解規格是 source of truth。
+3. 能用 AI Agent 長時間穩定執行任務。
+
+## 參考資源
+- Spect Kit 官方文件：https://github.com/github/spec-kit
+- Spect Kit SDD 核心概念：https://github.com/github/spec-kit/blob/main/spec-driven.md
+
+---
 
 ## 🛠️ 實戰小專案：台北市 YouBike 2.0 即時站點查詢器
 本實作將使用台北市政府公開資料，無需 API Key 即可串接。
@@ -52,28 +71,3 @@
 > **提示詞：**
 > "/speckit.implement '請依照 tasks.md 順序開始實作。優先建立 API 抓取邏輯，完成後請提醒我進行手動測試。'"
 > 
-## 🔍 LAB 實作詳細動作清單 (Detailed Actions)
- * **環境初始化**
-   * 使用 uv 安裝 CLI 工具。
-   * 執行 specify init --ai [你的Agent] (如 claude 或 copilot)。
-   * 執行 specify check 確保環境與 Git 分支權限正常。
- * **憲法定義 (Constitution)**
-   * 定義命名規範（如：變數使用小駝峰式命名）。
-   * 要求所有資料抓取必須包含 try-catch 異常處理。
- * **規格與計畫管理**
-   * AI 生成 spec.md 後，檢查是否包含所有的 user stories。
-   * 使用 /speckit.clarify 解決模糊不清的欄位名稱定義。
- * **全自動實作實踐**
-   * **挑戰**：在實作過程中，嚴格遵守「不改代碼，只改規格」的原則。
-   * 若 UI 呈現與預期不符，回頭更新 spec.md 後重新產出任務。
- * **最後驗收**
-   * 執行 /speckit.analyze 進行規格 vs 代碼的一致性掃描。
-   * 利用 /speckit.checklist 建立最後的 QA 檢核表。
-## 🎯 預期成果
- 1. **實作能力**：掌握從 0 到 1 使用 Spec-kit 快速開發原型的能力。
- 2. **思維轉換**：理解「規格是真實來源 (Source of truth)」，程式碼只是規格的表現形式。
- 3. **效率提升**：學會利用 AI Agent 進行長時間、自動化的任務執行而不偏移軌道。
-## 📚 參考資源
- * **官方 User Guide**:
- * **SDD 核心哲學**:
- * **Spec Kit GitHub**:
