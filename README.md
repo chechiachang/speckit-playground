@@ -4,6 +4,12 @@
 - 目標：從 vibe coding 轉向規格優先開發
 - 講者：Che-Chia Chang
 
+## 參與需求
+
+1. 攜帶筆電
+1. 安裝好 VSCode + Codex Extension
+1. Azure OpenAI API Key（也可使用講師提供的 Key）
+
 ## 時間安排
 | 時間 | 環節 | 重點 |
 |---|---|---|
@@ -11,8 +17,10 @@
 | 10-20m | 環境準備 | `specify init`、API Key、Agent 檢查 |
 | 20-30m | 憲法定義 | 定義專案原則（`/speckit.constitution`） |
 | 30-75m | 實作 LAB | 用 4 步驟 Prompt 建立 YouBike 2.0 網頁 |
-| 75-85m | 驗證修正 | 修正偏移並更新規格（`/speckit.clarify`） |
 | 85-90m | Q&A | 收尾與問答 |
+
+## 環境準備
+
 
 ## LAB 清單
 1. 環境：依 Spec Kit Option 1（Persistent installation）執行完整步驟。
