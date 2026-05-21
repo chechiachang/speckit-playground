@@ -4,3 +4,4 @@ Use compact input and output in simple basic English or zh-tw. Use English for a
 
 1. Follow `README.md` or instructions in the current directory hierarchy.
 2. Use `./tmp` for temporary files.
+3. Log all agent instructions and outputs in `./agent.log`.
