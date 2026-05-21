@@ -1,0 +1,15 @@
+=== speckit-constitution run (2026-05-21) ===
+Pre-check: parsed .specify/extensions.yml
+before_constitution executable hooks (enabled=true, optional=false):
+- git /speckit.git.initialize (condition=null)
+
+Constitution update:
+- File: .specify/memory/constitution.md
+- Replaced all [PLACEHOLDER] tokens with concrete rules derived from README.md/example-ubike.md
+- Version change: uninitialized template -> 0.1.0
+- Ratified: TODO(RATIFICATION_DATE) (unknown)
+- Last Amended: 2026-05-21
+- Validation: confirmed no remaining tokens matching \\[[A-Z0-9_]+\\]
+
+Post-check: after_constitution hook detected (optional=true, enabled=true, condition=null):
+- git /speckit.git.commit ("Commit constitution changes?")
