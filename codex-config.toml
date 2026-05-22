@@ -1,8 +1,0 @@
-model_provider = "azure"
-model = "gpt-5.4-nano"
-
-[model_providers.azure]
-name = "Azure OpenAI"
-base_url = "https://chechia-ws.cognitiveservices.azure.com/openai/v1"
-env_key = "AZURE_OPENAI_API_KEY"
-wire_api = "responses"
