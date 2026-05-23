@@ -1,1 +1,7 @@
 agent.log
+node_modules/
+.next/
+dist/
+build/
+*.log
+.env*
