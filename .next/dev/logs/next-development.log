@@ -1,0 +1,2 @@
+{"timestamp":"01:30:59.993","source":"Server","level":"ERROR","message":"Error: ENOENT: no such file or directory, scandir '/Users/chechia/workspace/c/speckit-playground/app'"}
+{"timestamp":"01:30:59.997","source":"Server","level":"ERROR","message":"Error: ENOENT: no such file or directory, scandir '/Users/chechia/workspace/c/speckit-playground/app'"}
