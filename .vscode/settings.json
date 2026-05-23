@@ -9,11 +9,11 @@
     "chat.tools.terminal.autoApprove": {
         ".specify/scripts/bash/": true,
         ".specify/scripts/powershell/": true,
-        "/^specify\\b.*$//": true,
-        "/^speckit\\b.*$//": true,
+        "/^(speckit|specify)/": true,
         "/^(pwd|ls|whoami|head|tail|wc|rg)(\\s|$)/": true,
         "/^git (status|diff\\b.*|show\\b.*|log\\b.*|branch\\b.*|rev-parse\\b.*)$/": true,
-        "/^(rm|mv|cp|chmod|chown|sed\\s+-i)\\b/": false,
+        "/^(cp|mv)\\s+-[rwx]+\\b/": true,
+        "/^(rm|chmod|chown|sed\\s+-i)\\b/": false,
         "test": true,
         "true": true
     }
