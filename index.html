@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台北市 YouBike 2.0 即時站點查詢器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <main class="mx-auto max-w-6xl px-4 py-8">
+      <section class="rounded-3xl bg-white p-6 shadow-lg ring-1 ring-slate-200">
+        <div class="mb-6">
+          <h1 class="text-3xl font-bold tracking-tight">台北市 YouBike 2.0 即時站點查詢器</h1>
+          <p class="mt-2 text-sm text-slate-600">自動載入台北市 YouBike 2.0 站點資料，支援依名稱或地址搜尋。</p>
+        </div>
+
+        <label class="mb-4 block">
+          <span class="mb-2 block text-sm font-medium text-slate-700">搜尋站點名稱或地址</span>
+          <input id="search" type="search" placeholder="例如：信義、台北101、忠孝" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 outline-none ring-0 transition focus:border-sky-500 focus:ring-2 focus:ring-sky-200" />
+        </label>
+
+        <div id="status" class="mb-4 rounded-2xl bg-slate-50 px-4 py-3 text-sm text-slate-600">正在載入站點資料...</div>
+        <button id="retry" type="button" class="mb-4 hidden rounded-2xl bg-sky-600 px-4 py-2 text-sm font-medium text-white hover:bg-sky-500">重新載入</button>
+
+        <div class="overflow-hidden rounded-2xl border border-slate-200">
+          <div class="grid grid-cols-12 gap-3 bg-slate-100 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <div class="col-span-6 md:col-span-7">站點名稱</div>
+            <div class="col-span-2 text-right">可用車輛</div>
+            <div class="col-span-2 text-right">剩餘空位</div>
+            <div class="col-span-2 md:col-span-1">地址</div>
+          </div>
+          <div id="list" class="divide-y divide-slate-200 bg-white"></div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

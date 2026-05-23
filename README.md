@@ -33,7 +33,7 @@
    uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git@vX.Y.Z
    pipx install --force git+https://github.com/github/spec-kit.git@vX.Y.Z
    ```
-2. 憲法：定義命名規範，資料抓取需有 `try-catch`。
+2. 憲法：以簡潔性和測試覆蓋率為核心；資料抓取與外部輸入需有明確錯誤處理。
 3. 規格：確認 `spec.md` 覆蓋所有 user stories，釐清模糊欄位。
 4. 實作：先改規格，不直接改程式碼；更新規格後再重生任務。
 5. 驗收：執行 `/speckit.analyze`，最後用 `/speckit.checklist` 完成檢核。
